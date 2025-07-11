@@ -2,8 +2,8 @@ import subprocess
 import tkinter as tk
 from tkinter import ttk, messagebox
 import asyncio
-from open_gopro import WiredGoPro
-from open_gopro.models import constants
+# from open_gopro import WiredGoPro
+# from open_gopro.models import constants
 from threading import Thread, Event
 import time
 import os
@@ -15,25 +15,25 @@ import pygame
 # ---------- Configuration (modify here each time) ------------
 
 USE_GOPROS = [
-    "C3461326516392", # GoPro3
-    "C3461326512607", # GoPro5
+    # "C3461326516392", # GoPro3
+    # "C3461326512607", # GoPro5
     ]
 
 USE_THINKLETS_SERIES = [
-    "MP6MB25N6104874", # no.1
-    "MP6MB25N6103675", # no.2
+    "MP6MB25N6104820", # no.1
+    "MP6MB25N6102698", # no.2
 ]
 
 USE_THINKLETS_IP = [
-    "192.168.68.11", # no.1
-    "192.168.68.12", # no.2 
+    "192.168.0.85", # no.1
+    "192.168.0.94", # no.2 
     ]
 
 THINKLETS_SDMARK = {
-    "192.168.68.11": "68AC-0CDA",
-    "192.168.68.12": "30A7-0EBF",
-    "MP6MB25N6104874": "68AC-0CDA",
-    "MP6MB25N6103675": "30A7-0EBF",
+    "192.168.0.85": "3E04-0CDC",
+    "192.168.0.94": "D4DD-0CD",
+    "MP6MB25N6104820": "3E04-0CDC",
+    "MP6MB25N6102698": "D4DD-0CD",
 }
 
 
@@ -326,7 +326,7 @@ class ModernRecorderApp:
 
     def clear_files(self):
         controller.clear_files()
-        messagebox.showinfo("Info", "Thinklet files cleared.")
+        messagebox.showinfo("Info", "Thinklet files cleared。")
 
 if __name__ == "__main__":
     root = tk.Tk()
